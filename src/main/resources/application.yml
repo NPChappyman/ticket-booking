@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: ticket-booking
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/ticketdb}
+    username: ${DB_USER:ticket}
+    password: ${DB_PASSWORD:ticket}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+server:
+  port: 8080
+
+booking:
+  hold-minutes: ${BOOKING_HOLD_MINUTES:15}
+  expiration-check-interval-ms: ${BOOKING_EXPIRATION_CHECK_MS:60000}
