@@ -15,11 +15,6 @@
 
 Проверка: http://localhost:8080/actuator/health
 
-## Тесты
-
-    mvn test
-
-Все тесты — чистые unit-тесты на JUnit 5 + Mockito, база данных для них не нужна.
 
 ## Доменная модель
 
